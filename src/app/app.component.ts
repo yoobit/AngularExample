@@ -1,4 +1,5 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
+import { Navigation, Router } from '@angular/router';
 const tokml = require('tokml');
 
 @Component({
@@ -19,15 +20,20 @@ export class AppComponent implements OnInit, AfterViewInit {
     },
   };
   kmlObject = tokml(this.geoObject);
+  constructor(router: Router) { }
   ngOnInit() {
     console.log(this.kmlObject);
+  }
+
+  alert() {
+    alert('hello');
   }
 
   ngAfterViewInit() {
     setTimeout(() => {
       let loader = document.getElementById('loader');
       if (loader != null) loader.style.display = 'none';
-    }, 3000);
+    }, 1000);
 
   }
 }

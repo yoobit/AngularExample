@@ -11,6 +11,7 @@ export class TestcomponentComponent implements OnInit {
   myfunc = () => 'hello';
 
   ngOnInit(): void {
+
   }
 
 }
